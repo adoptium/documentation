@@ -1,0 +1,5 @@
+Test 123
+
+image::karakun.png[Karakun]
+image::../shared/adoptium.svg[Adoptium]
+
