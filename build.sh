@@ -1,0 +1,1 @@
+asciidoctor --source-dir=. --base-dir=. '*/*.adoc' 
