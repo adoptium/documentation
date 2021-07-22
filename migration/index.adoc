@@ -3,21 +3,16 @@
 :sectanchors: 
 :url-repo: https://github.com/AdoptOpenJDK/website-adoptium-documentation
 
-== Migrating to AdoptOpenJDK
-If you are moving from Oracle JDK to OpenJDK from the AdoptOpenJDK project, you'll 
-probably have a few key questions on your mind. Firstly, you'll want to know what the 
-differences are between Oracle JDK and AdoptOpenJDK and whether there are any 
-steps you need to take to migrate. If you've looked at the home page, you'll also know 
-that we provide AdoptOpenJDK binaries with a choice between OpenJDK and Eclipse 
-OpenJ9 (with OpenJDK class libraries). The answers to common questions around these 
-choices are covered in the sections that follow.
+== Migrating to Temurin
+If you are moving from Oracle JDK to Temurin (or a similiar OpenJDK based distribution), you'll probably have a few key questions on your mind.
+Firstly, you'll want to know what the differences are between Oracle JDK and Temurin and whether there are any steps you need to take to migrate.
+The answers to common questions around these choices are covered in the sections that follow.
 
 To understand which platforms are supported, see the Platform Support Matrix.
 
 == Migrating from Oracle JDK
-The following table illustrates the proprietary components that can be found in Oracle JDK 8 
-and the alternative technologies that are either planned or available to replace them. Click on 
-the links to learn more about each component and any steps that might be necessary to adopt them.
+The following table illustrates the proprietary components that can be found in Oracle JDK 8 and the alternative technologies that are either planned or available to replace them.
+Click on the links to learn more about each component and any steps that might be necessary to adopt them.
 
 |===
 |Oracle JDK 8 proprietary component |Alternative component |OpenJDK 8 |OpenJDK 11
