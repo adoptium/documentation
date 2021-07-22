@@ -3,7 +3,7 @@
 :sectanchors: 
 :url-repo: https://github.com/AdoptOpenJDK/website-adoptium-documentation
 
-== Migrating to Temurin
+== Migrating to Eclipse Temurin™
 If you are moving from Oracle JDK to Temurin (or a similiar OpenJDK based distribution), you'll probably have a few key questions on your mind.
 Firstly, you'll want to know what the differences are between Oracle JDK and Temurin and whether there are any steps you need to take to migrate.
 The answers to common questions around these choices are covered in the sections that follow.
