@@ -23,52 +23,52 @@ the links to learn more about each component and any steps that might be necessa
 |Oracle JDK 8 proprietary component |Alternative component |OpenJDK 8 |OpenJDK 11
 
 |Java Web Start	
-|https://adoptopenjdk.net/migration.html#icedtea-web[*IcedTea-Web*]
+|xref:IcedTea-Web[*IcedTea-Web*]
 |icon:check[role=green]
 |icon:times[role=red]
 
 |JavaFX	
-|https://adoptopenjdk.net/migration.html#openjfx[*OpenJFX*]
+|xref:OpenJFX[*OpenJFX*]
 |icon:times[role=red]
 |icon:check[role=green]
 
 |T2K font rendering engine
-|https://adoptopenjdk.net/migration.html#freetype-font-rendering-library[*Freetype*]
+|xref:Freetype font rendering library[*Freetype*]
 |icon:check[role=green]
 |icon:check[role=green]
 
 |Monotype Lucida fonts
-|https://adoptopenjdk.net/migration.html#relicensed-lucida-fonts[*Relicensed Lucida fonts*]
+|xref:Relicensed Lucida fonts[*Relicensed Lucida fonts*]
 |icon:times[role=red] (coming soon)
 |icon:times[role=red] (coming soon)
 
 |Ductus 2D renderer	
-|https://adoptopenjdk.net/migration.html#pisces-and-marlin[*Pisces/Marlin*]
+|xref:Pisces and Marlin[*Pisces/Marlin*]
 |icon:check[role=green] (Pisces)
 |icon:check[role=green] (Marlin)
 
 |Kodac Color Matching System (KCMS) library
-|https://adoptopenjdk.net/migration.html#lcms[*LCMS*]
+|xref:LCMS[*LCMS*]
 |icon:check[role=green]
 |icon:check[role=green]
 
 |SNMP
-|Use https://adoptopenjdk.net/migration.html#jmx[*JMX*] (or SNMP4J)
+|Use xref:JMX[*JMX*] (or SNMP4J)
 |icon:check[role=green] (not bundled)
 |icon:check[role=green] (not bundled)
 
 |Sound drivers	
-|Use https://adoptopenjdk.net/migration.html#windows-sound-drivers[*Windows sound drivers*]
+|Use xref:Windows sound drivers[*Windows sound drivers*]
 |icon:check[role=green] (not bundled)
 |icon:check[role=green] (not bundled)
 
 |Java Flight Recorder (JFR)
-|https://adoptopenjdk.net/migration.html#java-flight-recorder[*Java Flight Recorder*]
+|xref:Java Flight Recorder[*Java Flight Recorder*]
 |icon:times[role=red] (coming soon)
 |icon:check[role=green]
 
 |Java Mission Control (JMC)
-|Use https://adoptopenjdk.net/migration.html#jdk-mission-control[*JDK Mission Control*]
+|Use xref:JDK Mission Control[*JDK Mission Control*]
 |icon:times[role=red] (coming soon)
 |icon:times[role=red] (coming soon)
 |===
