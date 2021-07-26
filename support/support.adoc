@@ -70,8 +70,4 @@ releases:
 |jdk-17 +
 19th Sep 2021
 |TBCfootnote:note[]
-
-
 |===
-
-
