@@ -14,8 +14,6 @@ As a community of open source developers, our commitment is to triage any issues
 source code project. Of course, if the problem arises from the way we build and test the code we can fix that directly. 
 For higher levels of assurance you should contact commercial companies offering support.
 
-== Commercial Support
-
 == Release Roadmap
 The frequency of Adoptium releases is guided by the schedule of our dependencies.
 
