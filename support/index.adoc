@@ -1,0 +1,71 @@
+= Support
+:icons: font
+:sectanchors: 
+:url-repo: https://github.com/AdoptOpenJDK/website-adoptium-documentation
+
+== Community Support
+Read https://medium.com/@javachampions/java-is-still-free-2-0-0-6b9aa8d6d244[Java Is Still Free (2.0.0)] for some 
+background information about Java support options. We are prepared to  stand behind our release quality binaries, 
+so each build that is identified as a release receives support via the Adoptium community. Our support means that 
+you can raise an issue to describe a bug you have found in the build, and we will work with you and the appropriate 
+development team to resolve it. Any fixes we identify will be delivered as part of the next Adoptium release.
+
+As a community of open source developers, our commitment is to triage any issues raised and champion them in the appropriate 
+source code project. Of course, if the problem arises from the way we build and test the code we can fix that directly. 
+For higher levels of assurance you should contact commercial companies offering support.
+
+== Release Roadmap
+The frequency of Adoptium releases is guided by the schedule of our dependencies.
+
+OpenJDK provide a new feature release every six months, and a maintenance/security update based upon each active release every 
+three months. The release dates for those from the OpenJDK project are the https://www.oracle.com/security-alerts/[Tuesdays closest to the 17th] 
+of January, April, July and October. We will follow this schedule for publishing binary releases from Adoptium to 
+ensure you get the latest, most secure builds.
+
+In addition, every three years one feature release will be designated as a Long Term Supported (LTS) release. We will produce LTS 
+releases for at least four years. This assurance will allow you to stay on a well-defined code stream, and give you time to migrate 
+to the next, new, stable, LTS release when it becomes available.
+
+Based upon this roadmap, and starting with Java 8 (currently supported releases in bold) here is the timetable for the various 
+releases:
+
+|===
+2+|First Availability |Latest Release |Next Release |End of Availability:footnote:note[As a general philosophy, Adoptium will continue to build binaries for LTS releases as long as the corresponding upstream source is actively maintained.]
+
+|Java 8 (LTS)
+|Mar 2014
+|jdk8u282-b08 +
+19th Jan 2021
+|jdk8u292 +
+20th Apr 2021
+|At Least May 2026footnote:note[]
+
+|Java 11 (LTS)
+|September 2018
+|jdk-11.0.10+9 +
+19th Jan 2021
+|jdk-11.0.11 +
+20th Apr 2021
+|At Least Oct 2024footnote:note[]
+
+|Java 15
+|Sep 2020
+|jdk-15.0.2+7 +
+20th Oct 2020
+|N/A
+|Mar 2021
+
+|Java 16
+|Mar 2021
+|N/A
+|jdk-16 +
+16th Mar 2021
+|Sep 2021
+
+|Java 17 (LTS)
+|Sep 2021
+|N/A
+|jdk-17 +
+19th Sep 2021
+|TBCfootnote:note[]
+|===
