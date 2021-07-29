@@ -23,58 +23,59 @@ the links to learn more about each component and any steps that might be necessa
 |Oracle JDK 8 proprietary component |Alternative component |OpenJDK 8 |OpenJDK 11
 
 |Java Web Start	
-|xref:IcedTea-Web[*IcedTea-Web*]
+|xref:#icedTea-web[*IcedTea-Web*]
 |icon:check[role=green]
 |icon:times[role=red]
 
 |JavaFX	
-|xref:OpenJFX[*OpenJFX*]
+|xref:#openJFX[*OpenJFX*]
 |icon:times[role=red]
 |icon:check[role=green]
 
 |T2K font rendering engine
-|xref:Freetype font rendering library[*Freetype*]
+|xref:#freeType-font-rendering-library[*Freetype*]
 |icon:check[role=green]
 |icon:check[role=green]
 
 |Monotype Lucida fonts
-|xref:Relicensed Lucida fonts[*Relicensed Lucida fonts*]
+|xref:#relicensed-lucida-fonts[*Relicensed Lucida fonts*]
 |icon:times[role=red] (coming soon)
 |icon:times[role=red] (coming soon)
 
 |Ductus 2D renderer	
-|xref:Pisces and Marlin[*Pisces/Marlin*]
+|xref:#pisces-and-marlin[*Pisces/Marlin*]
 |icon:check[role=green] (Pisces)
 |icon:check[role=green] (Marlin)
 
 |Kodac Color Matching System (KCMS) library
-|xref:LCMS[*LCMS*]
+|xref:#lcms[*LCMS*]
 |icon:check[role=green]
 |icon:check[role=green]
 
 |SNMP
-|Use xref:JMX[*JMX*] (or SNMP4J)
+|Use xref:#jmx[*JMX*] (or SNMP4J)
 |icon:check[role=green] (not bundled)
 |icon:check[role=green] (not bundled)
 
 |Sound drivers	
-|Use xref:Windows sound drivers[*Windows sound drivers*]
+|Use xref:#windows-sound-drivers[*Windows sound drivers*]
 |icon:check[role=green] (not bundled)
 |icon:check[role=green] (not bundled)
 
 |Java Flight Recorder (JFR)
-|xref:Java Flight Recorder[*Java Flight Recorder*]
+|xref:#java-flight-recorder[*Java Flight Recorder*]
 |icon:times[role=red] (coming soon)
 |icon:check[role=green]
 
 |Java Mission Control (JMC)
-|Use xref:JDK Mission Control[*JDK Mission Control*]
+|Use xref:#jdk-mission-control[*JDK Mission Control*]
 |icon:times[role=red] (coming soon)
 |icon:times[role=red] (coming soon)
 |===
 
 icon:pencil[] _JavaFX, JFR, and JMC were all contributed by Oracle to the OpenJDK project for releases after Java 8._
 
+[#icedTea-web]
 === IcedTea-Web
 
 Java Web Start was deprecated by Oracle in Java SE 8 and removed in Java SE 9. IcedTea-Web can provide 
@@ -104,6 +105,7 @@ Windows systems. Further work is underway to provide IcedTea-Web as an optional 
 platforms.
 ====
 
+[#openJFX]
 === OpenJFX
 
 Back in 2017, JavaFX was decoupled from the Oracle JDK and contributed to the OpenJDK community. The OpenJFX community is focused on 
@@ -113,40 +115,48 @@ OpenJFX 8 is no longer being actively maintained. If you need this capability, w
 
 For more information, read the OpenJFX FAQ.
 
+[#freeType-font-rendering-library]
 === Freetype font rendering library
 
 OpenJDK uses the open source FreeType font rendering library instead of the proprietary T2K font library.
 
+[#relicensed-lucida-fonts]
 === Relicensed Lucida fonts
 
 The Lucida fonts that are available in Oracle JDK 8 have a proprietary 3rd party license. AdoptOpenJDK intend to provide relicensed Lucida 
 fonts. Work is ongoing to minimize any display issues when these fonts are rendered by Freetype and is expected to complete in 2Q 2019.
 
+[#pisces-and-marlin]
 === Pisces and Marlin
 
 Oracle JDK 8 uses a proprietary 2D graphics renderer called Ductus, whereas OpenJDK uses an open-source renderer called Pisces. From OpenJDK 9, 
 the Marlin renderer is in use. Work is planned at AdoptOpenJDK to either backport Marlin to OpenJDK 8 and/or minimize any display issues between 
 the two. The outlook for completion is Q2 2019.
 
+[#lcms]
 === LCMS
 
 OpenJDK uses the Little Color Matching System (LCMS) open source open source library instead of the proprietary Kodac CMS library.
 
+[#jmx]
 === JMX
 
 The proprietary SNMP package shipped with Oracle JDK 8 is not present in OpenJDK. Use JMX as an alternative, or SNMP4J. These packages are 
 not bundled with the AdoptOpenJDK binaries.
 
+[#windows-sound-drivers]
 === Windows sound drivers
 
 Oracle JDK provides native sound drivers for Java 8 on Windows, which are not present in OpenJDK. Use the sound drivers that are available 
 with Microsoft Windows instead.
 
+[#java-flight-recorder]
 === Java Flight Recorder
 
 Java Flight Recorder (JFR) was decoupled from the Oracle JDK and contributed to the OpenJDK community. Work is underway to backport JFR from 
 OpenJDK 11 to OpenJDK 8. When this work is complete, AdoptOpenJDK will include JFR in OpenJDK 8 binaries.
 
+[#jdk-mission-control]
 === JDK Mission Control
 
 Java Mission Control (JMC) is being open sourced under the OpenJDK JDK Mission Control project. When available, JMC will be able to receive 
