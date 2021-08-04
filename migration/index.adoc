@@ -3,7 +3,7 @@
 :sectanchors: 
 :url-repo: https://github.com/AdoptOpenJDK/website-adoptium-documentation
 
-== Migrating to AdoptOpenJDK
+== Migrating to Adoptium
 If you are moving from Oracle JDK to OpenJDK from the AdoptOpenJDK project, you'll 
 probably have a few key questions on your mind. Firstly, you'll want to know what the 
 differences are between Oracle JDK and AdoptOpenJDK and whether there are any 
