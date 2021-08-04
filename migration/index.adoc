@@ -173,7 +173,7 @@ about these differences by reading the New to OpenJ9? topic in the OpenJ9 user d
 
 Here are a few of the resources available to help you with migrating to AdoptOpenJDK:
 
-* Ask questions directly by joining the AdoptOpenJDK Community Slack group.
+* Ask questions directly by joining the Adoptium Community Slack group.
 * Learn more about the AdoptOpenJDK project, including build and test infrastructure, by reading the Technical Steering Committee documentation.
 * For HotSpot VM documentation, see the HotSpot Runtime Overview.
 * For OpenJ9 VM documentation, see the OpenJ9 user documentation.
