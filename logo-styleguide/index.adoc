@@ -1,0 +1,134 @@
+= Adoptium Logo Styleguide
+:icons: font
+:sectanchors: 
+:url-repo: https://github.com/AdoptOpenJDK/website-adoptium-documentation
+:stylesdir: stylesheets/
+:stylesheet: style.css
+
+== Logo variants
+
+We provide several variants of the Adoptium logo that can be used when refering to Adoptium.
+The following images give an overview of all variants of the Adoptium logo that are allowed to use.
+
+=== Landscape variants of the logo
+
+The landscape layout is the default layout of the Adoptium logo.
+
+[.image-centered]
+.A short description of the logo
+image::logos/Logo_Adoptium_V2A.png[Bla, 320]
+
+[.image-centered]
+.A short description of the logo
+image::logos/Logo_Adoptium_V2B.png[Bla, 320]
+
+[.image-centered]
+.A short description of the logo
+image::logos/Logo_Adoptium_V2C.png[Bla, 320]
+
+[.image-centered]
+.A short description of the logo
+image::logos/Logo_Adoptium_V2D.png[Bla, 320]
+
+[.image-centered]
+.A short description of the logo
+image::logos/Logo_Adoptium_V2E.png[Bla, 320]
+
+[.image-centered]
+.A short description of the logo
+image::logos/Logo_Adoptium_V2F.png[Bla, 320]
+
+[.image-centered.dark-background]
+.A short description of the logo
+image::logos/Logo_Adoptium_V2G.png[Bla, 320]
+
+=== Centered variants of the logo
+
+The application layout of the Adoptium logo is an alternative layout of the logo that can be used to make the logo fit better in a given application or page layout.
+
+[.image-centered]
+.A short description of the logo
+image::logos/Logo_Adoptium_V1A.png[Bla, 320]
+
+[.image-centered]
+.A short description of the logo
+image::logos/Logo_Adoptium_V1B.png[Bla, 320]
+
+[.image-centered]
+.A short description of the logo
+image::logos/Logo_Adoptium_V1C.png[Bla, 320]
+
+[.image-centered]
+.A short description of the logo
+image::logos/Logo_Adoptium_V1D.png[Bla, 320]
+
+[.image-centered]
+.A short description of the logo
+image::logos/Logo_Adoptium_V1E.png[Bla, 320]
+
+[.image-centered]
+.A short description of the logo
+image::logos/Logo_Adoptium_V1F.png[Bla, 320]
+
+[.image-centered.dark-background]
+.A short description of the logo
+image::logos/Logo_Adoptium_V1G.png[Bla, 320]
+
+== Examples of correct logo usage
+
+When using the Adoptium logo you must stick to some basic rules.
+The aspect ratio of the logo must not be changed.
+Next to this not all logo variants can be used on any background since the contrast between the background and the logo might be too low.
+The following images show some examples of a correct usage of the Adoptium logo.
+
+[.image-green-border.image-centered]
+.A short description of the logo usage
+image::correct-1.png[Bla, 320]
+
+[.image-green-border.image-centered]
+.A short description of the logo usage
+image::correct-2.png[Bla, 320]
+
+[.image-green-border.image-centered]
+.A short description of the logo usage
+image::correct-3.png[Bla, 320]
+
+[.image-green-border.image-centered]
+.A short description of the logo usage
+image::correct-4.png[Bla, 320]
+
+[.image-green-border.image-centered]
+.A short description of the logo usage
+image::correct-5.png[Bla, 320]
+
+[.image-green-border.image-centered]
+.A short description of the logo usage
+image::correct-6.png[Bla, 320]
+
+== Examples of wrong logo usage
+
+The following images show some example of a incorrect usage of the Adoptium logo. 
+
+[.image-red-border.image-centered]
+.A short description of the logo usage
+image::wrong-1.png[Bla, 320]
+
+[.image-red-border.image-centered]
+.A short description of the logo usage
+image::wrong-2.png[Bla, 320]
+
+[.image-red-border.image-centered]
+.A short description of the logo usage
+image::wrong-3.png[Bla, 320]
+
+[.image-red-border.image-centered]
+.A short description of the logo usage
+image::wrong-4.png[Bla, 320]
+
+[.image-red-border.image-centered]
+.A short description of the logo usage
+image::wrong-5.png[Bla, 320]
+
+[.image-red-border.image-centered]
+.A short description of the logo usage
+image::wrong-6.png[Bla, 320]
