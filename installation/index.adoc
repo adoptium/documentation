@@ -1,298 +1,251 @@
-= Installation
 :source-highlighter: highlight.js
 :highlightjs-languages: PowerShell
 
-AdoptOpenJDK binaries are available for https://adoptopenjdk.net/releases.html[download] in the following types of installation package:
+= Installation
+We're currently working out our installation page. Please check back later!
 
-* <<archive>>
-* <<iinstallers>>
+Temurin binaries are available for https://adoptium.net/releases.html[download] in the following types of installation package:
 
-The binaries are supported on the architectures and operating systems listed in xref:support/index.adoc[Supported Platforms]. 
-If you're migrating to AdoptOpenJDK, you can learn about the differences between Oracle JDK and AdoptOpenJDK in our xref:migration/index.adoc[Migration Guide] and any steps that you might need to take.
-For example, how to use IcedTea-Web as an alternative to Web Start.
+* <<archives>>
+* <<installers>>
+* <<pkgmgr>>
 
-== Manual
-1. Go to https://adoptium.net/archive.html[archive download site]
-2. Select the desired version and JVM
-3. 
+The binaries are supported on the architectures and operating systems listed in xref:../support/index.adoc[Supported Platforms]. If you're migrating to Temurin, you can learn about the differences between Oracle JDK and Temurin in our xref:../migration/index.adoc[Migration Guide] and any steps that you might need to take.
 
-[[installers, Installers]]
+[[archives,Archive files]]
+== Archives
+The installation from archive has a general and platform specific part.
+First follow the geneal steps to download the correct archive:
+
+1. Go to https://adoptium.net/releases.html[Adoptiums Relaeses] page
+2. Select your desired version from the list
+3. Select your operating system and architecure
+4. Download the `.zip` or `.tar.gz` file
+5. Move the archive to a directory that will not move or be deleted
+
+NOTE: Use the checksum to ensure the authenticity of your binary.
+The Instructions are within the platform specific sections.
+
+=== Linux, Alpine and macOS
+Open a terminal and navigate to the directory containing the archive.
+
+==== Checking the SHA-256 checksum
+1. Run the following command to calcualte the checksum
+[source,Bash]
+sha256sum OpenJDK<version>-<platform>_<JVM>_<version>.tar.gz
+
+2. Compare the result with the checksum from https://adoptium.net/releases.html[Adoptiums Relaeses] page
+
+==== Install Adoptium
+1. Extract the `.tar.gz.` You can use the following command:
+[source,Bash]
+tar xzf OpenJDK<version>-<platform>_<JVM>_<version>.tar.gz
+
+2. Add this version of Java to your `PATH`:
+[source,Bash]
+export PATH=$PWD/jdk-<version>/bin:$PATH
+
+3. Check that Java has installed correctly:
+[source,Bash]
+java -version
+
+=== Windows
+Open the Command Prompt and navigate to the directory containing the archive.
+
+==== Checking the SHA-256 checksum
+1. Run the following command to calcualte the checksum
+[source,Powershell]
+certutil -hashfile OpenJDK<version>-<platform>_<JVM>_<version>.zip SHA256
+
+2. Compare the result with the checksum from https://adoptium.net/releases.html[Adoptiums Relaeses] page
+
+==== Install Adoptium
+1. Extract the `.zip` You can use the following command:
+[source,Powershell]
+Expand-Archive -Path .\OpenJDK<version>-<platform>_<JVM>_<version>.zip -DestinationPath .
+
+2. Add this version of Java to your `PATH`:
+[source,Powershell]
+set PATH=%cd%\jdk-<version>\bin;%PATH%
+
+3. Check that Java has installed correctly:
+[source,Powershell]
+java -version
+
+[[installers,Installers]]
 == Installers
-Installers are currently available for Windows(C), Linux(C), and macOS(C); JDK and JRE packages.
-Installation steps are covered in the following sections:
+Installers are currently available for Windows® and macOS® JDK and JRE packages. Installation steps are covered in the following sections:
 
-* <<windows-msi>>
-* <a href="#macos-pkg">macOS PKG installer packages
-* <a href="#linux-pkg">Linux RPM and DEB installer packages
+* <<win_msi>>
+* <<macos_inst>>
 
-[[windows-msi,Windows MSI installer packages]]
+[[win_msi,Windows MSI installer packages]]
 === Windows MSI installer packages
-AdoptOpenJDK Windows installer packages are available as standard `.msi` files, which can be run with an interactive user interface or run silently from the command line.
-The installer is designed for use on a per-machine basis, not per-user basis, so you can have only one installation of the MSI on a machine for all users.
+Temurin Windows installer packages are available as standard .msi files, which can be run with an interactive user interface or run silently from the command line. The installer is designed for use on a per-machine basis, not per-user basis, so you can have only one installation of the MSI on a machine for all users.
 
-IMPORTANT: Windows installer packages are supported only on Windows x64 systems.
-[[windows-msi-gui,Windows GUI installation]]
+NOTE: Windows installer packages are supported only on Windows x64 systems.
+
 ==== GUI installation
 Instructions for running an interactive installation using the Windows MSI installer.
 
-1. https://adoptopenjdk.net/releases.html[Download] the `.msi` file.
+1. https://adoptium.net/releases.html[Download] the .msi file.
 Open it to launch the installation program.
 
 2. Read and accept the license if you are happy with the terms.
 
-3. On the *Custom Setup* screen you can choose the features that you want to install and optionally change the default installation directory.
-+ By default, AdoptOpenJDK installs to `c:\Program Files\AdoptOpenJDK\<package>` with the following features, which you can deselect, if necessary:
-** Add the installation to the *PATH* environment variable
-** Associate `.jar` files with Java applications
+3. On the Custom Setup screen you can choose the features that you want to install and optionally change the default installation directory.
+By default, Temurin installs to `c:\Program Files\Temurin\<package>` with the following features, which you can deselect, if necessary:
 
-4. Additional features can be selected by clicking on the directory tree where you see a check mark (x). These features include:
-** Updating the *JAVA_HOME* environment variable
-** Installing IcedTea-Web (AdoptOpenJDK 8 only)
-** Associate `.jnlp` files with the IcedTea-Web application (AdoptOpenJDK 8 only)
+** Add the installation to the PATH environment variable
+** Associate .jar files with Java applications
 
-5. When you have chosen the features that you want to install, click *Next*.
++
+Additional features can be selected by clicking on the directory tree where you see a check mark (x).
+ These features include:
+** Updating the `JAVA_HOME` environment variable
 
-6. Click *Install* to begin the installation.
+4. When you have chosen the features that you want to install, click Next.
 
-7. When the installation is finished, click *Finish* to close the program.
+5. Click Install to begin the installation.
 
-[[windows-msi-cmdline,Windwos command-line installation]]
+6. When the installation is finished, click Finish to close the program.
+
 ==== Command-line installation
-A silent installation allows you to install the Windows package with pre-selected features without user interaction, which can be useful for widescale deployment. 
+A silent installation allows you to install the Windows package with pre-selected features without user interaction, which can be useful for widescale deployment.
 Follow these steps:
 
-1.  https://adoptopenjdk.net/releases.html[Download] the `.msi` file.
+1. https://adoptium.net/releases.html[Download] the .msi file.
 
-2. Choose the features that you want to install, which are shown in the following table: 
-[cols="1,1"]
+2. Choose the features that you want to install, which are shown in the following table:
 |===
-|Features|Desciption
+|Feature| Description
 
-|`FeatureMain`|Core AdoptOpenJDK installation (DEFAULT)
-|`FeatureEnvironment`|Update the *PATH* environment variable (DEFAULT)
-|`FeatureJarFileRunWith`|Associate `.jar` files with Java applications (DEFAULT)
-|`FeatureJavaHome`|Update the *JAVA_HOME* environment variable
-|`FeatureIcedTeaWeb`|Install https://www.github.com/adoptopenjdk/icedtea-web"[IcedTea-Web]
-|`FeatureJNLPFileRunWith`|Associate `.jnlp` files with IcedTea-web
-|`FeatureOracleJavaSoft`|Updates registry keys HKLM\SOFTWARE\JavaSoft\
+|`FeatureMain`| Core Temurin installation (DEFAULT)
+|`FeatureEnvironment`| the PATH environment variable (DEFAULT)
+|`FeatureJarFileRunWith`|Associate .jar files with Java applications (DEFAULT)
+|`FeatureJavaHome`| Update the JAVA_HOME environment variable
+|`FeatureOracleJavaSoft`| Updates registry keys HKLM\SOFTWARE\JavaSoft\
 |===
 
-NOTE: `FeatureOracleJavaSoft` can be used to prevent Oracle Java launching from PATH when AdoptOpenJDK is uninstalled.
-Reinstall Oracle Java if you need to restore the Oracle registry keys.
+NOTE: `FeatureOracleJavaSoft` can be used to prevent Oracle Java launching from `PATH` when Temurin is uninstalled. Reinstall Oracle Java if you need to restore the Oracle registry keys.
 
 Optional parameters can be used that group some of the features together:
-|===
-|Parameter|Features          
 
-|INSTALLLEVEL=1|FeatureMain, FeatureEnvironment, FeatureJarFileRunWith
-|INSTALLLEVEL=2|FeatureMain, FeatureEnvironment, FeatureJarFileRunWith, FeatureJavaHome, FeatureIcedTeaWeb
-|INSTALLLEVEL=3|FeatureMain, FeatureEnvironment, FeatureJarFileRunWith, FeatureJavaHome, FeatureIcedTeaWeb, FeatureJNLPFileRunWith
+|===
+|Parameter| Features
+
+|INSTALLLEVEL=1| FeatureMain, FeatureEnvironment, FeatureJarFileRunWith 
 |===
 
 3. Run the command on the target workstation.
-The following example silently installs AdoptOpenJDK, updates the PATH, associates `.jar` files with Java applications and defines JAVA_HOME:
 
-[source,PowerShell] 
-msiexec /i <package>.msi ADDLOCAL=FeatureMain,FeatureEnvironment,FeatureJarFileRunWith,FeatureJavaHome INSTALLDIR="c:\Program Files\AdoptOpenJDK\" /quiet
+The following example silently installs Temurin, updates the `PATH`, associates `.jar` files with Java applications and defines `JAVA_HOME`:
+[source,Powershell]
+msiexec /i <package>.msi ADDLOCAL=FeatureMain,FeatureEnvironment,FeatureJarFileRunWith,FeatureJavaHome INSTALLDIR="c:\Program Files\Eclipse Foundation\" /quiet
 
-NOTE: You must use `INSTALLDIR` with `FeatureMain`.
+NOTE: You must use INSTALLDIR with FeatureMain.
 
 The following example silently installs all the features for `INSTALLLEVEL=1`:
-
-[source,PowerShell]
+[source,Powershell]
 msiexec /i <package>.msi INSTALLLEVEL=1 /quiet
 
->If you want to launch an interactive installation in another language you can use the Windows installer `TRANSFORMS` option to set your language choice.
-For example, to set the UI language to German, use code `1031`, which must be preceded by a `:`.
-
-[source,PowerShell]
+If you want to launch an interactive installation in another language you can use the Windows installer `TRANSFORMS` option to set your language choice.
+For example, to set the UI language to German, use code 1031, which must be preceded by a :.
+[source,Powershell]
 msiexec /i <package>.msi INSTALLLEVEL=1 TRANSFORMS=:1031
 
-For a list of supported codes, see the https://github.com/AdoptOpenJDK/openjdk-installer/blob/master/wix/Lang/LanguageList.config[Language list].
+For a list of supported codes, see the Language list.
 
-[[windows-msi-upgrade,Windows reinstalling or upgrading]]
-==== Reinstalling or upgrading
-To reinstall AdoptOpenJDK in silent mode with default features, run the following command:
-       
-[source,PowerShell]
+===== Reinstalling or upgrading
+To reinstall Temurin in silent mode with default features, run the following command:
+[source,Powershell]
 msiexec /i <package>.msi REINSTALL=ALL /quiet
 
-If you want to upgrade AdoptOpenJDK in silent mode, run the following command:</p>
-
-[source,PowerShell]
+If you want to upgrade Temurin in silent mode, run the following command:
+[source,Powershell]
 msiexec /i <package>.msi REINSTALL=ALL REINSTALLMODE=amus /quiet
 
-`REINSTALLMODE` options: (from https://www.advancedinstaller.com/user-guide/control-events.html[Control Events])
-
+REINSTALLMODE options: (from Control Events)
 [horizontal]
- `a`:: Force all files to be installed regardless of checksum or version
- `m`:: Rewrite all required registry entries from the Registry Table that go to the HKEY_LOCAL_MACHINE
- `o`:: Reinstall if the file is missing or is an older version
- `u`:: Rewrite all required registry entries from the Registry Table that go to the HKEY_CURRENT_USER or HKEY_USERS
- `s`:: Reinstall all shortcuts and re-cache all icons overwriting any existing shortcuts or icons
+a:: Force all files to be installed regardless of checksum or version
+m:: Rewrite all required registry entries from the Registry Table that go to the `HKEY_LOCAL_MACHINE`
+o:: Reinstall if the file is missing or is an older version
+u:: Rewrite all required registry entries from the Registry Table that go to the `HKEY_CURRENT_USER` or `HKEY_USERS`
+s:: Reinstall all shortcuts and re-cache all icons overwriting any existing shortcuts or icons
 
 NOTE: `REINSTALL=ALL` automatically sets `REINSTALLMODE=omus`
 
-===== Upgrade limitation
-Upgrading `.msi` files works only for the first 3 digits of the build number due to an https://docs.microsoft.com/windows/desktop/Msi/productversion[MSI limitation]:
+===== Upgrade limitation:
+
+Upgrading .msi files works only for the first 3 digits of the build number due to an https://docs.microsoft.com/de-de/windows/win32/msi/productversion[MSI limitation]:
 
 * Upgrading 8.0.2.1 to 8.0.3.1 works.
-* Upgrading 8.0.2.1 to 8.0.2.2 does not work. Uninstall the previous `.msi` and install the new one.
+* Upgrading 8.0.2.1 to 8.0.2.2 does not work. Uninstall the previous .msi and install the new one.
 * Upgrading 8.0.2.1 to 8.1.2.1 works.
-* Upgrading 8.0.2.1 to 11.0.2.1 does not work. AdoptOpenJDK does not provide upgrades for major versions. Either keep both installations or uninstall the older one.
+* Upgrading 8.0.2.1 to 11.0.2.1 does not work. Temurin does not provide upgrades for major versions. Either keep both installations or uninstall the older one.
 
-==== Reference reading
-* https://www.advancedinstaller.com/user-guide/msiexec.html[Msiexec.exe Command Line]
+===== Reference reading
+https://www.advancedinstaller.com/user-guide/msiexec.html[Msiexec.exe Command Line]
 
-[[macos-pkg,macOS PKG installer packages]]
+[[macos_inst,macOS PKG installer packages]]
 === macOS PKG installer packages
-AdoptOpenJDK macOS installer packages are available as standard `.pkg` files, which can be run with an interactive user interface or run silently from the *Terminal* command line.
+Temurin macOS installer packages are available as standard .pkg files, which can be run with an interactive user interface or run silently from the Terminal command line.
 
-[[macos-pkg-gui,macOS GUI installation]]
 ==== GUI installation
 Instructions for running an interactive installation using the macOS PKG installer.
 
-1. https://adoptopenjdk.net/releases.html[Download] the `.pkg` file.
-2. Navigate to the folder that contains the file and open it to launch the installation program or drag the icon to your Application folder.
-3. The *Introduction* screen indicates the target location for the installation, which you can change later in the install process. Click *Continue*.
-4. Read the license, click *Continue* and accept the license if you are happy with the terms.
-5. Change the target location for the installation. Click *Install* to complete the installation.
+1. https://adoptium.net/releases.html[Download] the .pkg file.
 
-[[macos-pkg-cmdline,macOS command-line installation]]
+2. Navigate to the folder that contains the file and open it to launch the installation program or drag the icon to your Application folder.
+
+3. The Introduction screen indicates the target location for the installation, which you can change later in the install process.
+Click Continue.
+
+4. Read the license, click Continue and accept the license if you are happy with the terms.
+
+5. Change the target location for the installation.
+Click Install to complete the installation.
+
 ==== Command-line installation
 A silent installation allows you to install the macOS package without user interaction, which can be useful for widescale deployment.
-You must have administrator privileges. Follow these steps:
+You must have administrator privileges.
+Follow these steps:
 
-1.  https://adoptopenjdk.net/releases.html[Download] the `.pkg` file.
-2. Launch the Terminal app (`terminal.app`).
+1.  https://adoptium.net/releases.html[Download] the .pkg file.
+
+2. Launch the Terminal app (terminal.app).
+
 3. Run the following command:
 [source,Bash]
-installer -pkg <path_to_pkg>;<pkg_name>.pkg -target /
+installer -pkg <path_to_pkg>/<pkg_name>.pkg -target /
 
 4. Enter the Administrator password.
-5. AdoptOpenJDK installs to `/Library/Java/JavaVirtualMachines/AdoptOpenJDK-<version>.<jdk|jre>;/`
 
-[[linux-pkg,Linux RPM and DEB installer packages]]
-=== Linux RPM and DEB installer packages
-AdoptOpenJDK RPM and DEB packages are available for installing on your favourite Linux distribution.
+5. Temurin installs to `/Library/Java/JavaVirtualMachines/temurin-<version>.<jdk|jre>/`
 
-[[linux-pkg-deb,Deb installation on Debian or Ubuntu]]
-==== Deb installation on Debian or Ubuntu
-You need the codename of your Debian or Ubuntu version.
-It is usually recorded in `/etc/os-release` and can be extracted on Debian by running `cat /etc/os-release | grep VERSION_CODENAME | cut -d = -f 2` and on Ubuntu by running `cat /etc/os-release | grep UBUNTU_CODENAME | cut -d = -f 2`.
+[[pkgmgr,Package Managers]]
+== Package Managers
+Package managers are currently available for Windows.
+Installation steps are covered in the following sections:
 
-1. Ensure the necessary packages are present:
-[source,Bash]
-sudo apt-get install -y wget apt-transport-https gnupg
-        
-2. Download the AdoptOpenJDK GPG key:
-[source,Bash]
-wget https://adoptopenjdk.jfrog.io/adoptopenjdk/api/gpg/key/public
+=== Windows winget
+Temurin Windows installer packages are available on winget, which can be run silently from the command line. The installer is designed for use on a per-machine basis, not per-user basis, so you can have only one installation of the MSI on a machine for all users.
 
-3. Make key accessible by apt (replace angle bracket and the values in it. For example --import public)
-[source,Bash]
-gpg --no-default-keyring --keyring ./adoptopenjdk-keyring.gpg --import <dowloaded-keyfile-name><.ext>;
-gpg --no-default-keyring --keyring ./adoptopenjdk-keyring.gpg --export --output adoptopenjdk-archive-keyring.gpg 
+NOTE: Windows installer packages are supported only on Windows x64 systems.
 
-4. Clean Up
-[source,Bash]
-rm adoptopenjdk-keyring.gpg
+==== Winget installation
+Run the following command to install the package.
+[source,Powershell]
+winget install EclipseFoundation.AdoptiumOpenJDK.17
 
-5. Save keyring in root directory (Create the keyrings directory)
-[source,Bash]
-sudo mv adoptopenjdk-archive-keyring.gpg /usr/share/keyrings && sudo chown root:root /usr/share/keyrings/adoptopenjdk-archive-keyring.gpg 
+NOTE: You can install a different major version by change the version number at the end of the package name.
 
-6. Configure AdoptOpenJDK's apt repository by replacing the angle bracket and values in it:
-[source,Bash]
-echo "deb [signed-by=/usr/share/keyrings/adoptopenjdk-archive-keyring.gpg] https://adoptopenjdk.jfrog.io/adoptopenjdk/deb <codename> main" | sudo tee /etc/apt/sources.list.d/adoptopenjdk.list
+==== Winget upgrade
+Run the following command to upgrade the package to the latest minor version of the currently installed major version.
+[source,Powershell]
+winget upgrade EclipseFoundation.AdoptiumOpenJDK.17
 
-7. Refresh the package indexes:
-[source,Bash]
-sudo apt-get update
-
-8. To see which variants of AdoptOpenJDK are available, run
-[source,Bash]
-sudo apt-cache search adoptopenjdk
-
-9. To install a variant of AdoptOpenJDK, run 
-[source,Bash]
-apt-get install <packagename>
-sudo apt-get install adoptopenjdk-11-hotspot
-
-[[linux-pkg-deb-derivates]]
-==== Deb installation on Raspberry Pi OS, Linux Mint and other Debian-based distributions
-Raspberry Pi OS (formerly known as Raspbian), Linux Mint and other Debian- and Ubuntu-based distributions are usually based on a specific Debian or Ubuntu release.
-For example, Linux Mint 20.04 (Ulyanna) is based on Ubuntu 20.04 (Focal Fossa), Raspberry Pi OS 10 is based on Debian GNU/Linux 10 (Buster). Because AdoptOpenJDK only offers repositories for Debian and Ubuntu, you need to find out which Debian or Ubuntu version your distribution is based on.
-This is usually recorded in `/etc/os-release` and can usually be extracted on Debian-based distributions by running  `cat /etc/os-release | grep VERSION_CODENAME | cut -d = -f 2` and on Ubuntu-based distributions by running `cat /etc/os-release | grep UBUNTU_CODENAME | cut -d = -f 2`.
-
-1. Ensure the necessary packages are present:
-[source,Bash]
-sudo apt-get install -y wget apt-transport-https gnupg
-        
-2. Download the AdoptOpenJDK GPG key:
-[source,Bash]
-wget https://adoptopenjdk.jfrog.io/adoptopenjdk/api/gpg/key/public
-
-3.  Make key accessible by apt (replace angle bracket and the values in it. For example --import public)
-[source,Bash] 
-gpg --no-default-keyring --keyring ./adoptopenjdk-keyring.gpg --import <dowloaded-keyfile-name><.ext>
-gpg --no-default-keyring --keyring ./adoptopenjdk-keyring.gpg --export --output adoptopenjdk-archive-keyring.gpg 
-
-5. Clean Up
-[source,Bash]
-rm adoptopenjdk-keyring.gpg
-
-6.  Save keyring in root directory (Create the keyrings directory)
-[source,Bash]
-sudo mv adoptopenjdk-archive-keyring.gpg /usr/share/keyrings && sudo chown root:root /usr/share/keyrings/adoptopenjdk-archive-keyring.gpg 
-
-7. Configure AdoptOpenJDK's apt repository by replacing the angle bracket and values in it:
-[source,Bash]
-echo "deb [signed-by=/usr/share/keyrings/adoptopenjdk-archive-keyring.gpg] https://adoptopenjdk.jfrog.io/adoptopenjdk/deb <codename> main" | sudo tee /etc/apt/sources.list.d/adoptopenjdk.list
-
-8. Refresh the package indexes:
-[source,Bash]
-sudo apt-get update
-
-9. To see which variants of AdoptOpenJDK are available, run
-[source,Bash]
-sudo apt-cache search adoptopenjdk
-
-10. To install a variant of AdoptOpenJDK, run <code>apt-get install <packagename></code>, for example:
-[source,Bash]
-sudo apt-get install adoptopenjdk-11-hotspot
-
-[[linux-pkg-rpm,RPM installation]]
-==== RPM installation
-RPM packages are maintained in artifactory for various Linux distributions.
-For a full list (with artifactory `baseurl` values), see https://adoptopenjdk.jfrog.io/adoptopenjdk/rpm/[Supported RPM versions].
-
-===== RPM installation on Centos, RHEL, or Fedora
-The following steps describe how to install an RPM package for Centos.
-To install an RPM for RHEL or Fedora update the `baseurl` value accordingly.
-
-1. Add the appropriate RPM repository to your `/etc/yum.repos.d/adoptopenjdk.repo` file, by running the following command:
-[source,Bash]
-cat <<'EOF'> /etc/yum.repos.d/adoptopenjdk.repo
-[AdoptOpenJDK]
-name=AdoptOpenJDK
-baseurl=http://adoptopenjdk.jfrog.io/adoptopenjdk/rpm/centos/$releasever/$basearch
-enabled=1
-gpgcheck=1
-gpgkey=https://adoptopenjdk.jfrog.io/adoptopenjdk/api/gpg/key/public
-EOF
-
-2. Install your choice of OpenJDK. For example, to install AdoptOpenJDK version 8 with OpenJ9, run:
-[source,Bash]
-yum install adoptopenjdk-8-openj9
-
-===== RPM installation on openSUSE or SLES
-The following steps describe how to install an RPM package on openSUSE v15. To install an RPM for SLES, or to install a different version of openSUSE, switch the `baseurl` value.
-
-1. Add the appropriate RPM repository to your `/etc/yum.repos.d/adoptopenjdk.repo` file, by running the following command:
-[source,Bash]
-zypper ar -f http://adoptopenjdk.jfrog.io/adoptopenjdk/rpm/opensuse/15.0/$(uname -m) adoptopenjdk
-
-2. Install your choice of OpenJDK. For example, to install AdoptOpenJDK version 8 with OpenJ9, run:
-[source,Bash]
-zypper install adoptopenjdk-8-openj9
+==== Winget uninstall
+Run the following command to uninstall the package.
+[source,Powershell]
+winget uninstall EclipseFoundation.AdoptiumOpenJDK.17
