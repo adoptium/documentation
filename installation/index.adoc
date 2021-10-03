@@ -1,18 +1,20 @@
 :source-highlighter: highlight.js
 :highlightjs-languages: PowerShell
+:sectanchors: 
+:url-repo: https://github.com/AdoptOpenJDK/website-adoptium-documentation
 
 = Installation
 We're currently working out our installation page. Please check back later!
 
 Temurin binaries are available for https://adoptium.net/releases.html[download] in the following types of installation package:
 
-* <<archives>>
-* <<installers>>
-* <<pkgmgr>>
+* xref:#archives[Archive]
+* xref:#installers[Installers]
+* xref:#pkgmgr[Package Managers]
 
 The binaries are supported on the architectures and operating systems listed in xref:../support/index.adoc[Supported Platforms]. If you're migrating to Temurin, you can learn about the differences between Oracle JDK and Temurin in our xref:../migration/index.adoc[Migration Guide] and any steps that you might need to take.
 
-[[archives,Archive files]]
+[#archives]
 == Archives
 The installation from archive has a general and platform specific part.
 First follow the geneal steps to download the correct archive:
@@ -72,14 +74,14 @@ set PATH=%cd%\jdk-<version>\bin;%PATH%
 [source,Powershell]
 java -version
 
-[[installers,Installers]]
+[#installers]
 == Installers
 Installers are currently available for Windows® and macOS® JDK and JRE packages. Installation steps are covered in the following sections:
 
-* <<win_msi>>
-* <<macos_inst>>
+* xref:#win_msi[Windows MSI installer packages]
+* xref:#macos_inst[macOS PKG installer packages]
 
-[[win_msi,Windows MSI installer packages]]
+[#win_msi]
 === Windows MSI installer packages
 Temurin Windows installer packages are available as standard .msi files, which can be run with an interactive user interface or run silently from the command line. The installer is designed for use on a per-machine basis, not per-user basis, so you can have only one installation of the MSI on a machine for all users.
 
@@ -187,7 +189,7 @@ Upgrading .msi files works only for the first 3 digits of the build number due t
 ===== Reference reading
 https://www.advancedinstaller.com/user-guide/msiexec.html[Msiexec.exe Command Line]
 
-[[macos_inst,macOS PKG installer packages]]
+[#macos_inst]
 === macOS PKG installer packages
 Temurin macOS installer packages are available as standard .pkg files, which can be run with an interactive user interface or run silently from the Terminal command line.
 
@@ -223,7 +225,7 @@ installer -pkg <path_to_pkg>/<pkg_name>.pkg -target /
 
 5. Temurin installs to `/Library/Java/JavaVirtualMachines/temurin-<version>.<jdk|jre>/`
 
-[[pkgmgr,Package Managers]]
+[#pkgmgr]
 == Package Managers
 Package managers are currently available for Windows.
 Installation steps are covered in the following sections:
