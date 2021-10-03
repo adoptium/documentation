@@ -10,27 +10,23 @@ jobs:
   build:
     runs-on: ubuntu-18.04
     steps:
-      - uses: actions/checkout@v2
-      
-      - uses: ruby/setup-ruby@v1
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
         with:
           ruby-version: 2.7
 
-      - uses: reitzig/actions-asciidoctor@v2.0.0
+      - name: Setup Asciidoctor
+        uses: reitzig/actions-asciidoctor@v2.0.0
 
-      - run: mkdir target
+      - name: Checkout
+        uses: actions/checkout@v2
 
-      - run: asciidoctor --source-dir=. --destination-dir=target  --trace --base-dir=. '*/*.adoc' > target/build.log
+      - name: Build
+        run: asciidoctor --source-dir=. --destination-dir=./target  --trace --base-dir=. '*/*.adoc'
 
-      - uses: actions/upload-artifact@v2
+      - name: Store Result
+        uses: actions/upload-artifact@v2
         with:
-          name: build-log
-          path: target/build.log
-          if-no-files-found: ignore
-
-      - uses: actions/upload-artifact@v2
-        with:
-          name: build-result
+          name: result
           path: target
           if-no-files-found: error
-        
