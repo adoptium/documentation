@@ -1,0 +1,36 @@
+name: Build
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+      
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 2.7
+
+      - uses: reitzig/actions-asciidoctor@v2.0.0
+
+      - run: mkdir target
+
+      - run: asciidoctor --source-dir=. --destination-dir=target  --trace --base-dir=. '*/*.adoc' > target/build.log
+
+      - uses: actions/upload-artifact@v2
+        with:
+          name: build-log
+          path: target/build.log
+          if-no-files-found: ignore
+
+      - uses: actions/upload-artifact@v2
+        with:
+          name: build-result
+          path: target
+          if-no-files-found: error
+        
