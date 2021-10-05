@@ -19,9 +19,9 @@ The binaries are supported on the architectures and operating systems listed in 
 The installation from archive has a general and platform specific part.
 First follow the geneal steps to download the correct archive:
 
-1. Go to https://adoptium.net/releases.html[Adoptiums Relaeses] page
+1. Go to https://adoptium.net/releases.html[Adoptiums Releases] page
 2. Select your desired version from the list
-3. Select your operating system and architecure
+3. Select your operating system and architecture
 4. Download the `.zip` or `.tar.gz` file
 5. Move the archive to a directory that will not move or be deleted
 
@@ -32,11 +32,11 @@ The Instructions are within the platform specific sections.
 Open a terminal and navigate to the directory containing the archive.
 
 ==== Checking the SHA-256 checksum
-1. Run the following command to calcualte the checksum
+1. Run the following command to calculate the checksum
 [source,Bash]
 sha256sum OpenJDK<version>-<platform>_<JVM>_<version>.tar.gz
 
-2. Compare the result with the checksum from https://adoptium.net/releases.html[Adoptiums Relaeses] page
+2. Compare the result with the checksum from https://adoptium.net/releases.html[Adoptiums Releases] page
 
 ==== Install Adoptium
 1. Extract the `.tar.gz.` You can use the following command:
@@ -55,11 +55,11 @@ java -version
 Open the Command Prompt and navigate to the directory containing the archive.
 
 ==== Checking the SHA-256 checksum
-1. Run the following command to calcualte the checksum
+1. Run the following command to calculate the checksum
 [source,Powershell]
 certutil -hashfile OpenJDK<version>-<platform>_<JVM>_<version>.zip SHA256
 
-2. Compare the result with the checksum from https://adoptium.net/releases.html[Adoptiums Relaeses] page
+2. Compare the result with the checksum from https://adoptium.net/releases.html[Adoptiums Releases] page
 
 ==== Install Adoptium
 1. Extract the `.zip` You can use the following command:
