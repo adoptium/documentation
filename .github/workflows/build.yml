@@ -1,9 +1,6 @@
 name: Build
 
 on:
-  push:
-    branches:
-      - main
   pull_request:
 
 jobs:
@@ -22,11 +19,15 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Build
-        run: asciidoctor --source-dir=. --destination-dir=./target  --trace --base-dir=. '*/*.adoc'
+        run: asciidoctor --source-dir=. --trace --base-dir=. '*/*.adoc'
 
       - name: Store Result
         uses: actions/upload-artifact@v2
         with:
           name: result
-          path: target
+          # include everything which inside a directory except asciidoctor files and hidden directories
+          path: |
+            ./*/*
+            !*/*.adoc
+            !.*/*
           if-no-files-found: error
