@@ -1,0 +1,33 @@
+name: Build
+
+on:
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 2.7
+
+      - name: Setup Asciidoctor
+        uses: reitzig/actions-asciidoctor@v2.0.0
+
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Build
+        run: asciidoctor --source-dir=. --trace --base-dir=. '*/*.adoc'
+
+      - name: Store Result
+        uses: actions/upload-artifact@v2
+        with:
+          name: result
+          # include everything which inside a directory except asciidoctor files and hidden directories
+          path: |
+            ./*/*
+            !*/*.adoc
+            !.*/*
+          if-no-files-found: error
