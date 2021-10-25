@@ -5,7 +5,7 @@
 
 Adoptium.net will provide several documentations: For non technical end users the page needs to provide multilingual manuals for installing Temurin. Next to this we want to provide (technical) documentation for contributors or information regarding the licence of Temurin for system administrators and IT managers. These are just some examples of the different documentations that need to be hosted at Adoptium.net. The following image shows an overview of the planned Adoptium.net page.
 
-IMAGE
+image::sitemap.png[sitemap]
 
 == Definition of documentation
 
@@ -13,7 +13,7 @@ As you can see the sitemap is separated into 3 different types of pages. This do
 
 Since we target different personas by the page and documentation it doesn't make sense to provide a single big document. Instead of this the website should provide the functionality to render single documents. A document is normally an asciidoc file that can contain (include) other asciidoc files and resources like images. Such documents should be rendered and integrated as part of the Adoptium.net webpage.
 
-IMAGE
+image::mockup-1.png[mockup]
 
 The URL should define the document that must be rendered. While the concrete scheme is not defined yet we can start with the following definition:
 
@@ -24,7 +24,7 @@ Since Adoptium.net is an open source project we want to make it as easy as possi
 
 `https://github.com/[TEAM]/[REPO]/edit/master/src/documenation/[DOC-NAME]/index.adoc`
 
-IMAGE
+image::mockup-2.png[mockup]
 
 Since we want to honor the work that people did on the documentation at Adoptium.net we will show the GitHub profiles of all contributors at the bottom of the page. Each profile links directly to the user page at GitHub. This feature is optional for Version 1 and can be added on a future milestone.
 
@@ -34,21 +34,21 @@ In Version 1 all documents can be rendered at build-time. In general this should
 
 The documentation will be based on AsciiDoc. Each documentation topic is defined by a folder that is named by the topic (technical name). Each folder contains the Asciidoc files and resources like images that belong to the topic. General resources that will be used in several topics should be stored in a special folder named “shared”.
 
-IMAGE
+image::general-structure-2.png[mockup]
 
 Since we want to support i18n directly from the beginning a folder can contain multiple AsciiDoc files in different languages. The index.adoc file should always be part of a folder and should contain the english documentation. This will be the default language that will be used if the requested language is not available. The AsciiDoc file for a specific language is called `index_XX.adoc` where `XX` defines the iso code of the language that is used in the file.
 
-IMAGE
+image::doc-folder.png[mockup]
 
 A common problem in documentation is the reuse and modification of images and diagrams. Therefore draw.io should be used wherever possible to create illustrations that are needed for the documentation. Next to this SVG should be used whenever possible instead of using pixel based images. For such pixel based images PNG should be used and such images should have a transparent background. 
 
-IMAGE
+image::shared-folder.png[mockup]
 
-IMAGE
+image::general-structure-1.png[mockup]
 
 == How the documentation is rendered
 
-IMAGE
+image::workflow.png[mockup]
 
 == Possible next steps
 
