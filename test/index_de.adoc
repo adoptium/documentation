@@ -1,8 +1,18 @@
+:copyright: Apache-2.0 License
+:description: A test document. 
+:keywords: adoptium docu-test
+:orgname: Eclipse Adoptium
+:lang: de 
+:source-highlighter: highlight.js
+:icons: font
+:sectids:
+:sectlinks:
+:hide-uri-scheme:
+:sectanchors:
+:url-repo: https://github.com/AdoptOpenJDK/website-adoptium-documentation
+
 = Document Title 
 Keibel, Christopher <christopher.keibel.90@gmail.com> 
-:description: A test document. 
-:sectanchors: 
-:url-repo: https://github.com/AdoptOpenJDK/website-adoptium-documentation
 
 Test DE 123
 

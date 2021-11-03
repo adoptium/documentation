@@ -24,6 +24,7 @@ The must have attributes are required in every adoc file.
 :sectlinks:
 :hide-uri-scheme:
 :sectanchors:
+:url-repo: https://github.com/AdoptOpenJDK/website-adoptium-documentation
 ----
 <1> two to three summary of the document
 <2> enrich with further keywords

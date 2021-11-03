@@ -1,3 +1,16 @@
+:copyright: Apache-2.0 License
+:description: Document how the Adoptium documentation is developed
+:keywords: adoptium documentation
+:orgname: Eclipse Adoptium
+:lang: en 
+:source-highlighter: highlight.js
+:icons: font
+:sectids:
+:sectlinks:
+:hide-uri-scheme:
+:sectanchors:
+:url-repo: https://github.com/AdoptOpenJDK/website-adoptium-documentation
+
 = How to contribute to this documentation?
 
 To have a common sense about how to document Adoptium Documentation has a, wait a minute... **Documentation**

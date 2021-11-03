@@ -1,6 +1,15 @@
+:copyright: Apache-2.0 License
+:description: How to install Eclipse Adoptium on your machine
+:keywords: adoptium installation
+:orgname: Eclipse Adoptium
+:lang: en 
 :source-highlighter: highlight.js
 :highlightjs-languages: PowerShell
-:sectanchors: 
+:icons: font
+:sectids:
+:sectlinks:
+:hide-uri-scheme:
+:sectanchors:
 :url-repo: https://github.com/AdoptOpenJDK/website-adoptium-documentation
 
 = Installation

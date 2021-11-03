@@ -1,7 +1,18 @@
-= First Timers Support (DRAFT)
+:copyright: Apache-2.0 License
+:description: Support with first time contributions
+:keywords: adoptium documentation contribute first-time
+:orgname: Eclipse Adoptium
+:lang: en 
+:source-highlighter: highlight.js
 :icons: font
-:sectanchors: 
+:sectids:
+:sectlinks:
+:hide-uri-scheme:
+:sectanchors:
 :url-repo: https://github.com/AdoptOpenJDK/website-adoptium-documentation
+
+
+= First Timers Support (DRAFT)
 
 At Adoptium we want to help people to get into OpenSource, Java and the Java Community.
 Therefore it is quite important for us to provide help to people that want to start working on open source.

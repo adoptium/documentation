@@ -1,7 +1,17 @@
-= Migration Guide
+:copyright: Apache-2.0 License
+:description: How to migrate to Eclipse Adoptium
+:keywords: adoptium migration
+:orgname: Eclipse Adoptium
+:lang: en 
+:source-highlighter: highlight.js
 :icons: font
-:sectanchors: 
+:sectids:
+:sectlinks:
+:hide-uri-scheme:
+:sectanchors:
 :url-repo: https://github.com/AdoptOpenJDK/website-adoptium-documentation
+
+= Migration Guide
 
 == Migrating to AdoptOpenJDK
 If you are moving from Oracle JDK to OpenJDK from the AdoptOpenJDK project, you'll 

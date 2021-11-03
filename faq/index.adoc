@@ -1,3 +1,16 @@
+:copyright: Apache-2.0 License
+:description: Frequently ask questions about Eclipse Adoptium
+:keywords: adoptium faq
+:orgname: Eclipse Adoptium
+:lang: en 
+:source-highlighter: highlight.js
+:icons: font
+:sectids:
+:sectlinks:
+:hide-uri-scheme:
+:sectanchors:
+:url-repo: https://github.com/AdoptOpenJDK/website-adoptium-documentation
+
 = Adoptium Frequently Asked Questions
 
 We have completed our first releases at Eclipse Temurin and will be updating this FAQ as and when things are completed and available. 
