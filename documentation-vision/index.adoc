@@ -1,8 +1,17 @@
-= Adoptium.net documentation visualization and structure
+:copyright: Apache-2.0 License
+:description: What is the vision for the Adoptium documentation project?
+:keywords: adoptium documentation vision
+:orgname: Eclipse Adoptium
+:lang: en 
+:source-highlighter: highlight.js
 :icons: font
-:sectanchors: 
-:url-repo: https://github.com/AdoptOpenJDK/website-adoptium-documentation
+:sectids:
+:sectlinks:
 :hide-uri-scheme:
+:sectanchors:
+:url-repo: https://github.com/AdoptOpenJDK/website-adoptium-documentation
+
+= Adoptium.net documentation visualization and structure
 
 Adoptium.net will provide several documentations: For non technical end users the page needs to provide multilingual manuals for installing Temurin.
 Next to this we want to provide (technical) documentation for contributors or information regarding the licence of Temurin for system administrators and IT managers.

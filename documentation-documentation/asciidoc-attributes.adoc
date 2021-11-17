@@ -1,0 +1,51 @@
+
+== Document Style
+* **New sentence, new line**, otherwise pull requests are not comment-able.
+* **Document Attributes set**, see <<_document_attributes>>
+
+== Document Attributes
+Asciidoctor provides a lot of build in attributes to control the result.
+All possible build in attributes are listed in the https://docs.asciidoctor.org/asciidoc/latest/attributes/document-attributes/[Document Attributes] section of Asciidoctors documenration.
+For the Adoptium documentation we decided that some attributes are a must-have or no-go.
+
+=== Must-Have Attributes
+The must have attributes are required in every adoc file.
+
+[source,asciidoc]
+----
+:copyright: Apache-2.0 License
+:description: // <1>
+:keywords: adoptium // <2>
+:orgname: Eclipse Adoptium
+:lang: en // <3>
+:source-highlighter: highlight.js
+:icons: font
+:sectids:
+:sectlinks:
+:hide-uri-scheme:
+:sectanchors:
+:url-repo: https://github.com/AdoptOpenJDK/website-adoptium-documentation
+----
+<1> two to three summary of the document
+<2> enrich with further keywords
+<3> see https://html.spec.whatwg.org/#the-lang-and-xml:lang-attributes
+
+=== Additional Attributes
+In some cases a few more attributes are of interest.
+[source,asciidoctor]
+----
+:title: // <1>
+:toc: // <2>
+:highlightjs-languages: // <3>
+----
+<1> add a short title if the site name should differ from the first level heading, see https://docs.asciidoctor.org/asciidoc/latest/document/title/#title-attr[here]
+<2> add a table of contents for long sites, see https://docs.asciidoctor.org/asciidoc/latest/toc/[here]
+<3> for not standard languages as Asciidoctor, see https://highlightjs.org/download/[here]
+
+=== Permitted Attributes
+Some attributes are dangerous for the Adoptium documentation.
+That are:
+
+* `:experimental:`
+* `:reproducible:`
+* all style related stuff

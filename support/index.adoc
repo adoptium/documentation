@@ -1,7 +1,17 @@
-= Support
+:copyright: Apache-2.0 License
+:description: What stages of support Eclipse Adoptium provide?
+:keywords: adoptium support
+:orgname: Eclipse Adoptium
+:lang: en 
+:source-highlighter: highlight.js
 :icons: font
-:sectanchors: 
+:sectids:
+:sectlinks:
+:hide-uri-scheme:
+:sectanchors:
 :url-repo: https://github.com/AdoptOpenJDK/website-adoptium-documentation
+
+= Support
 
 == Community Support
 Read https://medium.com/@javachampions/java-is-still-free-2-0-0-6b9aa8d6d244[Java Is Still Free (2.0.0)] for some 
