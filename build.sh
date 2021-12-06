@@ -1,1 +1,1 @@
-asciidoctor --source-dir=. --base-dir=. '*/*.adoc' 
+asciidoctor --source-dir=. --base-dir=. '*/*.adoc' -a stylesheet=./stylesheets/adoptium-docu.css
