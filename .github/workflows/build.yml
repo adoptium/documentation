@@ -19,7 +19,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Build
-        run: asciidoctor --source-dir=. --trace --base-dir=. '*/*.adoc' -a stylesheet=stylesheets/adoptium-docu.css
+        run: asciidoctor --source-dir=. --trace --base-dir=. '*/*.adoc' -a stylesheet=./stylesheets/adoptium-docu.css
 
       - name: Store Result
         uses: actions/upload-artifact@v2
