@@ -7,7 +7,7 @@ The documentation is based on [asciidoc](https://docs.asciidoctor.org/asciidoc/l
 ## Structure of the repository
 
 Each documentation topic is defined by a folder that is named by the topic (technical name). 
-Each folder contains the Asciidoc files and resources like images that belong to the topic.
+Each folder contains the Asciidoc files (*.adoc) and resources like images that belong to the topic.
 General resources that will be used in several topics should be stored in a special folder named “shared”.
 
 ![repo structure](.readme/structure-1.png)
