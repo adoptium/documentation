@@ -15,6 +15,6 @@
 
 To have a common sense about how to document Adoptium Documentation has a, wait a minute... **Documentation**
 
-include::eca-sign-off.adoc[]
+include::documentation-documentation/eca-sign-off.adoc[]
 
-include::asciidoc-attributes.adoc[]
+include::documentation-documentation/asciidoc-attributes.adoc[]
