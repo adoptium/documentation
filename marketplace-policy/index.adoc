@@ -1,3 +1,17 @@
+:copyright: Apache-2.0 License
+:description: Adoptium Marketplace Policy
+:keywords: adoptium marketpalce policy
+:orgname: Eclipse Adoptium
+:lang: en 
+:source-highlighter: highlight.js
+:highlightjs-languages: PowerShell
+:icons: font
+:sectids:
+:sectlinks:
+:hide-uri-scheme:
+:sectanchors:
+:url-repo: https://github.com/adoptium/documentation
+
 Adoptium Software Products Marketplace
 --------------------------------------
 
